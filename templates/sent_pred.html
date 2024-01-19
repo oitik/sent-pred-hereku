@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>Bangla Sentence Type Predictor</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="./static/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="./static/css2/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+</head>
+
+<body>
+  <nav class="light-blue lighten-1" role="navigation">
+    <div class="nav-wrapper container">
+        <a id="logo-container" href="#" class="brand-logo">
+            <img src="./static/images/logo.jpeg" alt="Logo" class="logo-img" height="67" style="border-radius:8px">
+        </a>
+        <ul class="right hide-on-med-and-down">
+            <li><a href="#">Tanbeer Jubaer</a></li>
+        </ul>
+
+        <ul id="nav-mobile" class="sidenav">
+            <li><a href="#">Tanbeer Jubaer</a></li>
+        </ul>
+        <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+    </div>
+</nav>
+
+
+  <div class="section no-pad-bot" id="index-banner">
+    <div class="container">
+      <br><br>
+      <h1 class="header center orange-text">Bangla Sentence Type Predictor</h1>
+      <div class="row center">
+        <h5 class="header col s12 light">Predict the type of Bangla Sentence.</h5>
+      </div>
+
+      <div class="row">
+        <form action='/predict' method="post" class="col s12">
+          <div class="row">
+            <div class="input-field col s12">
+              <label for="bangla_sentence"><b>Bangla Sentence</b></label>
+              <br>
+              <textarea placeholder="Enter your Bangla Sentence Here" name="bangla_sentence" id="bangla_sentence" class="materialize-textarea">{{ entered_text }}</textarea>
+            </div>
+          </div>
+
+          <div class="row center">
+            <button type="submit" class="btn-large waves-effect waves-light orange">Predict Sentence Type</button>
+          </div>
+        </form>
+      </div>
+
+      <!-- Result Box -->
+      <div class="row">
+        <div class="col s12">
+          <div class="card-panel orange lighten-5">
+            <span class="black-text">{{ pred }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <br><br>
+
+  <footer class="page-footer orange">
+    <div class="container">
+      <div class="row">
+        <!-- Your footer content here -->
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+        Made by <a class="orange-text text-lighten-3" href="https://www.facebook.com/tanbeerjubaer.oitik">NOT STRONG ENOUGH</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src=".js/materialize.js"></script>
+  <script src="js/init.js"></script>
+</body>
+</html>
